@@ -1,3 +1,10 @@
+---
+tags:
+    - WPF
+    - FrontEnd
+icon: fontawesome/solid/desktop
+---
+
 - UserControl：适用于粒度较大，需要自己的 ViewModel 的组件；
 - Custom Control：适用于粒度小，无额外状态或状态较少的组件；
 
