@@ -1,7 +1,7 @@
 ---
 tags:
     - WPF
-    - FrontEnd
+    - Frontend
 icon: fontawesome/solid/desktop
 ---
 
