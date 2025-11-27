@@ -517,38 +517,38 @@
 <p><a href="https://learn.microsoft.com/en-us/dotnet/desktop/wpf/events/object-lifetime-events">https://learn.microsoft.com/en-us/dotnet/desktop/wpf/events/object-lifetime-events</a></p>
 </blockquote>
 <ol>
-<li>Window()</li>
-<li>Window.InitializeComponent</li>
-<li>UserControl()</li>
-<li>UserControl.InitializeComponent</li>
-<li>UserControl.Initialized<ul>
+<li><code>Window()</code></li>
+<li><code>Window.InitializeComponent</code></li>
+<li><code>UserControl()</code></li>
+<li><code>UserControl.InitializeComponent</code></li>
+<li><code>UserControl.Initialized</code><ul>
 <li>元素的属性已被设置</li>
 <li>构造函数执行完毕</li>
 <li>子元素已经初始化完成</li>
-<li>但是 Initialized 事件并不等待所有元素及其子元素被初始化完毕再发出</li>
+<li>但是 <code>Initialized</code> 事件并不等待所有元素及其子元素被初始化完毕再发出</li>
 </ul>
 </li>
-<li>Window.Initialized</li>
-<li>UserControl.Loaded<ul>
+<li><code>Window.Initialized</code></li>
+<li><code>UserControl.Loaded</code><ul>
 <li>When the logical tree that contains the element is complete and connected to a presentation source. The presentation source provides the window handle (HWND) and rendering surface.</li>
 <li>数据绑定已经完成</li>
 <li>布局系统已经完成所有渲染所需的计算</li>
 <li>在最终渲染之前</li>
-<li>Loaded 事件会等待所有逻辑树上的元素都加载完成，自上而下传播，类似 tunneling</li>
-<li>在 Activaed 事件发出后才会发出</li>
+<li><code>Loaded</code> 事件会等待所有逻辑树上的元素都加载完成，自上而下传播，类似 tunneling</li>
+<li>在 <code>Activated</code> 事件发出后才会发出</li>
 </ul>
 </li>
-<li>Window.Loaded<ul>
+<li><code>Window.Loaded</code><ul>
 <li>需要加载数据的时候</li>
 </ul>
 </li>
-<li>Window.ContentRendered<ul>
+<li><code>Window.ContentRendered</code><ul>
 <li>需要操作组件的时候</li>
 </ul>
 </li>
-<li>Window.Unloaded</li>
-<li>UseControl.Unloaded<ul>
-<li>当 Unload 事件来到子元素的时候，它的父级可能已经 unset 了，这意味着父级的绑定、资源引用、样式的值已经不正确了</li>
+<li><code>Window.Unloaded</code></li>
+<li><code>UseControl.Unloaded</code><ul>
+<li>当 <code>Unloaded</code> 事件来到子元素的时候，它的父级可能已经 unset 了，这意味着父级的绑定、资源引用、样式的值已经不正确了</li>
 </ul>
 </li>
 </ol>
