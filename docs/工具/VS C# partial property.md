@@ -5,6 +5,7 @@ tags:
 icon: fontawesome/solid/code
 ---
 
+
 用于 `CommunityToolkit.Mvvm` 的 partial property Code Snippet。
 
 ## Code Snippet
@@ -49,3 +50,4 @@ public partial $type$ $prop$ { get; set; }
 ## Ref
 
 [Walkthrough: Create a code snippet in Visual Studio](https://learn.microsoft.com/en-us/visualstudio/ide/walkthrough-creating-a-code-snippet?view=visualstudio)
+
