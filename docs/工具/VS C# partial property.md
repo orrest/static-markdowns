@@ -2,7 +2,7 @@
 tags:
     - VisualStudio
     - C#
-icon: fontawesome/solid/code
+icon: fontawesome/solid/file-code
 ---
 
 
