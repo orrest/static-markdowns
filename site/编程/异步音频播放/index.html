@@ -114,7 +114,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#taskcompletionsource" class="md-skip">
+        <a href="#1-taskcompletionsource" class="md-skip">
           Skip to content
         </a>
       
@@ -588,13 +588,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#taskcompletionsource" class="md-nav__link">
+  <a href="#1-taskcompletionsource" class="md-nav__link">
     <span class="md-ellipsis">
       
-        TaskCompletionSource
+        1 TaskCompletionSource
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="1 TaskCompletionSource">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2 一种验证
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -804,13 +821,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#taskcompletionsource" class="md-nav__link">
+  <a href="#1-taskcompletionsource" class="md-nav__link">
     <span class="md-ellipsis">
       
-        TaskCompletionSource
+        1 TaskCompletionSource
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="1 TaskCompletionSource">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2 一种验证
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -890,7 +924,7 @@
 
   <h1>异步音频播放</h1>
 
-<h2 id="taskcompletionsource">TaskCompletionSource<a class="headerlink" href="#taskcompletionsource" title="Permanent link">&para;</a></h2>
+<h2 id="1-taskcompletionsource">1 TaskCompletionSource<a class="headerlink" href="#1-taskcompletionsource" title="Permanent link">&para;</a></h2>
 <p>官方的 demo 中使用的是控制台程序，并通过 <code>Console.ReadKey</code> 来避免程序结束。</p>
 <p>在 WPF 中像这样把所有步骤写在一个方法中时会出现一个问题，尽管程序没有结束，但是函数释放了。</p>
 <p>由于 <code>Play</code> 不是一个阻塞方法，因此函数在结束后会释放其中所持有的资源，导致“点击了按钮，但是没有播放音频文件”的现象。</p>
@@ -957,6 +991,7 @@
 </span><span id="__span-0-59"><a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a><span class="w">    </span><span class="p">}</span>
 </span><span id="__span-0-60"><a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a><span class="p">}</span>
 </span></code></pre></div>
+<h3 id="2">2 一种验证<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
 <p>如果像这样使函数所使用的系统资源随 viewModel 生命周期，音频文件也能够播放至结束。</p>
 <p>不过按钮的 <code>IsEnabled</code> 状态并不符合预期，播放命令在点击时就释放了，<code>player.Play</code> 能够播放完毕是因为它在后台线程上触发了播放任务，所需要的资源也未随着函数结束而释放，因此能够播放完毕。</p>
 <div class="language-C# highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">public</span><span class="w"> </span><span class="k">sealed</span><span class="w"> </span><span class="k">partial</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">PlayerViewModel</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">ObservableRecipient</span>
