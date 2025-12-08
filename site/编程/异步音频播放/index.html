@@ -596,10 +596,9 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1 TaskCompletionSource">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -607,11 +606,6 @@
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -829,10 +823,9 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1 TaskCompletionSource">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -840,11 +833,6 @@
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -991,7 +979,7 @@
 </span><span id="__span-0-59"><a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a><span class="w">    </span><span class="p">}</span>
 </span><span id="__span-0-60"><a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a><span class="p">}</span>
 </span></code></pre></div>
-<h3 id="2">2 一种验证<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<h2 id="2">2 一种验证<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <p>如果像这样使函数所使用的系统资源随 viewModel 生命周期，音频文件也能够播放至结束。</p>
 <p>不过按钮的 <code>IsEnabled</code> 状态并不符合预期，播放命令在点击时就释放了，<code>player.Play</code> 能够播放完毕是因为它在后台线程上触发了播放任务，所需要的资源也未随着函数结束而释放，因此能够播放完毕。</p>
 <div class="language-C# highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">public</span><span class="w"> </span><span class="k">sealed</span><span class="w"> </span><span class="k">partial</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">PlayerViewModel</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">ObservableRecipient</span>
