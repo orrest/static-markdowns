@@ -155,5 +155,3 @@ protected ViewRegistration? GetRegistration(string name) =>
 ## 总结
 
 Prism 中主要通过向 DI 容器中注册 `ViewRegistration` 实例，达到能够在 DI 容器中获得字符串到类型映射的目的，同时 DI 容器又能够通过类型获得注册的视图实例。
-
-仅出于导航的目的的话可以直接将视图注册为 KeyedService。
