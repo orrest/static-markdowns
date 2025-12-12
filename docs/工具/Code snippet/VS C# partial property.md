@@ -1,7 +1,8 @@
 ---
 tags:
+	- Tools
+	- Code
     - VisualStudio
-    - C#
 icon: fontawesome/solid/file-code
 ---
 
