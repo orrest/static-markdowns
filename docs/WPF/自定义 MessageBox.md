@@ -2,7 +2,8 @@
 tags:
     - WPF
     - Frontend
-icon: fontawesome/solid/desktop
+    - Customizing
+icon: fontawesome/solid/puzzle-piece
 ---
 
 ## MessageBox

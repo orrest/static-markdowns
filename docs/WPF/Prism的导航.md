@@ -3,7 +3,7 @@ tags:
     - WPF
     - Frontend
     - Navigation
-icon: fontawesome/solid/desktop
+icon: fontawesome/solid/code
 ---
 
 ## 问题

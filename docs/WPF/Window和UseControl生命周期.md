@@ -2,7 +2,7 @@
 tags:
     - WPF
     - Frontend
-icon: fontawesome/solid/desktop
+icon: fontawesome/brands/pagelines
 ---
 
 > https://learn.microsoft.com/en-us/dotnet/desktop/wpf/events/object-lifetime-events
