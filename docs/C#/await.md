@@ -53,6 +53,7 @@ public class AwaitOperator
 没看懂
 
 > https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/
+
 - 如果下一步的开始依赖于上一步的结果，那么异步甚至比同步更慢，因为还额外有线程调度的时间；
 - 如果几个任务之间是独立的，那么异步执行能够显著提高效率；
 - 通过分离 Task 的执行和 await 来实现独立任务之间的同时在不同线程上的执行；
