@@ -113,6 +113,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -454,6 +459,26 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M360.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6m64.6 136.1c-12.5 12.5-12.5 32.8 0 45.3l73.4 73.4-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l96-96c12.5-12.5 12.5-32.8 0-45.3l-96-96c-12.5-12.5-32.8-12.5-45.3 0zm-274.7 0c-12.5-12.5-32.8-12.5-45.3 0l-96 96c-12.5 12.5-12.5 32.8 0 45.3l96 96c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l73.3-73.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Await
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -472,6 +497,46 @@
   
 
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        概念
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        几个例子
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1229,6 +1294,36 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        概念
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        几个例子
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1292,17 +1387,27 @@
 
   <h1>Await</h1>
 
+<blockquote>
+<p><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/await">https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/await</a>
+<a href="https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/">https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/</a>
+<a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/expressions#1299-await-expressions">https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/expressions#1299-await-expressions</a></p>
+</blockquote>
+<h2 id="_1">概念<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
 <li>await 的作用是，将其修饰的表达式后面的流程作为回调加给 task；</li>
-<li>注册完这个回调，线程就不必再持有当前方法了，因为后面的流程最终将会以回调的方式执行，所以相当于此方法“已经完成”了；
-    &gt; 划线部分应该不是很准确，涉及到一些我暂不清楚的细节</li>
 <li>有的描述中会说 “方法会从 await ‘暂停’ 的地方继续执行”，这实际上是因为 <code>await</code> 后的代码作为回调被执行了，与 “暂停” 这个概念没有关系；</li>
 <li>“暂停” 这个概念的产生或许是因为调试的时候，看起来 <code>await</code> 前后还是在同一个方法里，但前后的流程可能并没有在相同线程中执行（当然也有可能在相同线程中，取决于任务调度）；</li>
 <li>如果直接调用一个 <code>Task</code> 而不 <code>await</code>，那么它会在线程池线程上执行，但是无法正常捕获异常；</li>
+<li>当使用 <code>await</code> 被应用到 task 上时，失败的 task 会抛出异常；</li>
+<li>如果下一步的开始依赖于上一步的结果，那么异步甚至比同步更慢，因为还额外有线程调度的时间；</li>
+<li>如果几个任务之间是独立的，那么异步执行能够显著提高效率；</li>
+<li>通过分离 <code>Task</code> 的执行和 <code>await</code> 来实现独立任务同时在不同线程上的执行；</li>
+<li>Task.Exception 属性是 System.AggregateException 类型的对象，因为异步任务执行的过程中可能会抛出多个异常；</li>
+<li>如果 Task.Exception 是空的，那么会创建一个 AggregateException 异常，并抛出这集合中的第一个异常；</li>
+<li><code>async/await</code> 在语义上与 <code>ContinueWith</code> 类似，但实际上编译器并没有将 <code>await</code> 表达式直接转换成 <code>ContinueWith</code>。编译器生成优化过的状态机代码，提供类似的运行逻辑。</li>
+<li><code>await</code> 的方法并不是一定要有线程切换，<code>await</code> 只是标记了一个同步上下文切换点；</li>
 </ul>
-<blockquote>
-<p><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/await">https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/await</a></p>
-</blockquote>
+<h2 id="_2">几个例子<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <div class="language-C# highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">AwaitOperator</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">{</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="n">Task</span><span class="w"> </span><span class="nf">Main</span><span class="p">()</span>
@@ -1333,21 +1438,6 @@
 </span></code></pre></div>
 <ul>
 <li>Task 完成后会通知（实际是以回调的形式执行 await 后的操作）</li>
-</ul>
-<blockquote>
-<p><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/expressions#1299-await-expressions">https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/expressions#1299-await-expressions</a></p>
-<p>看 evaluation 的部分
-没看懂</p>
-<p><a href="https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/">https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/</a></p>
-</blockquote>
-<ul>
-<li>如果下一步的开始依赖于上一步的结果，那么异步甚至比同步更慢，因为还额外有线程调度的时间；</li>
-<li>如果几个任务之间是独立的，那么异步执行能够显著提高效率；</li>
-<li>通过分离 Task 的执行和 await 来实现独立任务之间的同时在不同线程上的执行；</li>
-<li>当使用 await 被应用到 task 上时，失败的 task 会抛出异常；</li>
-<li>Task.Exception 属性是 System.AggregateException 类型的对象，因为异步任务执行的过程中可能会抛出多个异常；</li>
-<li>如果 Task.Exception 是空的，那么会创建一个 AggregateException 异常，并抛出这集合中的第一个异常；</li>
-<li>async/await 在语义上与 ContinueWith 类似，但实际上编译器并没有将 await 表达式直接转换成 ContinueWith。编译器生成优化过的状态机代码，提供相似的运行逻辑。</li>
 </ul>
 <div class="language-C# highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">Coffee</span><span class="w"> </span><span class="n">cup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PourCoffee</span><span class="p">();</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Coffee is ready&quot;</span><span class="p">);</span>
