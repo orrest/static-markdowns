@@ -13,4 +13,7 @@ This is a static blog site made with [Zensical](https://zensical.org/docs/get-st
 ### Blogs
 - [Articles about Aspire [davidfowl@Microsoft]](https://medium.com/@davidfowl)
 
+### Articles
+- [Linux 漫谈（一）](https://v2ex.com/t/1180785#reply22)
+- [Linux 漫谈（二）](https://v2ex.com/t/1181027#reply12)
 
