@@ -12,36 +12,36 @@
         <meta name="author" content="Orrest">
       
       
-        <link rel="canonical" href="https://www.orrest.me/%E8%8B%B1%E8%AF%AD/%E8%A1%A8%E7%A4%BA%E2%80%9C%E4%BF%9D%E7%95%99%E2%80%9D%E7%9A%84%E5%8D%95%E8%AF%8D/">
+        <link rel="canonical" href="https://www.orrest.me/dotnet/WPF/Window%E5%92%8CUseControl%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">
       
       
-        <link rel="prev" href="../persons%20%E5%92%8C%20people/">
+        <link rel="prev" href="../Prism%E7%9A%84%E5%AF%BC%E8%88%AA/">
       
       
-        <link rel="next" href="../%E8%A1%A8%E7%A4%BA%E2%80%9C%E8%BD%AC%E6%8D%A2%E2%80%9D%E7%9A%84%E5%8D%95%E8%AF%8D/">
+        <link rel="next" href="../%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5%E5%AE%B9%E5%99%A8%E4%B8%AD%E6%B3%A8%E5%86%8C%E5%B7%A5%E5%8E%82/">
       
       
         
       
       
-      <link rel="icon" href="../../images/favicon.png">
+      <link rel="icon" href="../../../images/favicon.png">
       <meta name="generator" content="zensical-0.0.14">
     
     
       
-        <title>表示“保留”的单词 - Orrest's</title>
+        <title>Window和UseControl生命周期 - Orrest's</title>
       
     
     
       
         
       
-      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.f1b6466b.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/modern/main.f1b6466b.min.css">
       
         
           
         
-        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.dfe2e883.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/modern/palette.dfe2e883.min.css">
       
       
   
@@ -89,7 +89,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
 
@@ -113,11 +113,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#words" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -130,7 +125,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Orrest&#x27;s" class="md-header__button md-logo" aria-label="Orrest's" data-md-component="logo">
+    <a href="../../.." title="Orrest&#x27;s" class="md-header__button md-logo" aria-label="Orrest's" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M475.3.1c9.9-.8 19.6 3 26.6 10s10.8 16.7 10 26.6c-4 49.3-17.4 126.2-46.3 199.7-1.8 4.5-5.5 7.9-10.2 9.3L374.5 270c-3.9 1.2-6.5 4.7-6.5 8.8 0 5.1 4.1 9.2 9.2 9.2h38.6c12 0 19.7 12.8 13.5 23.1-4 6.7-8.3 13.2-12.7 19.6-2 2.9-5 5-8.4 6.1L310.5 366c-3.9 1.2-6.5 4.7-6.5 8.8 0 5.1 4.1 9.2 9.2 9.2h16c14.6 0 21 17.4 8.8 25.4-68 45-137.7 43.3-182.4 31.3-12.7-3.4-24-9.9-34.4-17.9L48 496c-8.8 8.8-23.2 8.8-32 0s-8.8-23.2 0-32l80-80 .5.5q1.05-1.95 2.7-3.6L256 224c8.8-8.8 8.8-23.2 0-32s-23.2-8.8-32 0L89.7 326.2c-8.9 8.9-24 4.4-25-8.2-4.3-53.2 9.3-123.1 72.6-186.4C228.4 40.5 391.5 6.9 475.2.1z"/></svg>
@@ -150,7 +145,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              表示“保留”的单词
+              Window和UseControl生命周期
             
           </span>
         </div>
@@ -218,7 +213,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   介绍
@@ -232,6 +227,8 @@
   
   
   
+    
+  
   
     
     
@@ -239,11 +236,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../dotnet/C%23/await/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../C%23/await/" class="md-tabs__link">
           
   
   Dotnet
@@ -272,7 +271,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../%E5%B7%A5%E5%85%B7/Code%20snippet/VS%20C%23%20partial%20property/" class="md-tabs__link">
+        <a href="../../../%E5%B7%A5%E5%85%B7/Code%20snippet/VS%20C%23%20partial%20property/" class="md-tabs__link">
           
   
   工具
@@ -290,13 +289,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../persons%20%E5%92%8C%20people/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../%E8%8B%B1%E8%AF%AD/persons%20%E5%92%8C%20people/" class="md-tabs__link">
           
   
   英语
@@ -315,7 +312,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1/%E6%9C%89%E9%99%90%E7%8A%B6%E6%80%81%E6%9C%BA/" class="md-tabs__link">
+        <a href="../../../%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1/%E6%9C%89%E9%99%90%E7%8A%B6%E6%80%81%E6%9C%BA/" class="md-tabs__link">
           
   
   软件设计
@@ -334,7 +331,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../%E9%A1%B9%E7%9B%AE/%E8%87%AA%E5%8A%A8%E7%B1%BB%E5%9B%BE%E7%94%9F%E6%88%90/" class="md-tabs__link">
+        <a href="../../../%E9%A1%B9%E7%9B%AE/%E8%87%AA%E5%8A%A8%E7%B1%BB%E5%9B%BE%E7%94%9F%E6%88%90/" class="md-tabs__link">
           
   
   项目
@@ -373,7 +370,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Orrest&#x27;s" class="md-nav__button md-logo" aria-label="Orrest's" data-md-component="logo">
+    <a href="../../.." title="Orrest&#x27;s" class="md-nav__button md-logo" aria-label="Orrest's" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M475.3.1c9.9-.8 19.6 3 26.6 10s10.8 16.7 10 26.6c-4 49.3-17.4 126.2-46.3 199.7-1.8 4.5-5.5 7.9-10.2 9.3L374.5 270c-3.9 1.2-6.5 4.7-6.5 8.8 0 5.1 4.1 9.2 9.2 9.2h38.6c12 0 19.7 12.8 13.5 23.1-4 6.7-8.3 13.2-12.7 19.6-2 2.9-5 5-8.4 6.1L310.5 366c-3.9 1.2-6.5 4.7-6.5 8.8 0 5.1 4.1 9.2 9.2 9.2h16c14.6 0 21 17.4 8.8 25.4-68 45-137.7 43.3-182.4 31.3-12.7-3.4-24-9.9-34.4-17.9L48 496c-8.8 8.8-23.2 8.8-32 0s-8.8-23.2 0-32l80-80 .5.5q1.05-1.95 2.7-3.6L256 224c8.8-8.8 8.8-23.2 0-32s-23.2-8.8-32 0L89.7 326.2c-8.9 8.9-24 4.4-25-8.2-4.3-53.2 9.3-123.1 72.6-186.4C228.4 40.5 391.5 6.9 475.2.1z"/></svg>
@@ -391,7 +388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -417,8 +414,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -430,19 +429,22 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -460,7 +462,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -490,17 +492,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
         
           
-          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="">
             
   
   
@@ -536,7 +541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dotnet/C%23/await/" class="md-nav__link">
+      <a href="../../C%23/await/" class="md-nav__link">
         
   
   
@@ -566,7 +571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dotnet/C%23/double.ToString/" class="md-nav__link">
+      <a href="../../C%23/double.ToString/" class="md-nav__link">
         
   
   
@@ -601,8 +606,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -629,18 +636,21 @@
     
       
       
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
         
           
-          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
             
   
   
@@ -658,7 +668,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -676,7 +686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dotnet/WPF/Prism%E7%9A%84%E5%AF%BC%E8%88%AA/" class="md-nav__link">
+      <a href="../Prism%E7%9A%84%E5%AF%BC%E8%88%AA/" class="md-nav__link">
         
   
   
@@ -703,10 +713,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../dotnet/WPF/Window%E5%92%8CUseControl%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -724,6 +741,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -736,7 +754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dotnet/WPF/%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5%E5%AE%B9%E5%99%A8%E4%B8%AD%E6%B3%A8%E5%86%8C%E5%B7%A5%E5%8E%82/" class="md-nav__link">
+      <a href="../%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5%E5%AE%B9%E5%99%A8%E4%B8%AD%E6%B3%A8%E5%86%8C%E5%B7%A5%E5%8E%82/" class="md-nav__link">
         
   
   
@@ -766,7 +784,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dotnet/WPF/%E5%BC%82%E6%AD%A5%E9%9F%B3%E9%A2%91%E6%92%AD%E6%94%BE/" class="md-nav__link">
+      <a href="../%E5%BC%82%E6%AD%A5%E9%9F%B3%E9%A2%91%E6%92%AD%E6%94%BE/" class="md-nav__link">
         
   
   
@@ -796,7 +814,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dotnet/WPF/%E7%AE%80%E5%8D%95%E5%AF%BC%E8%88%AA1/" class="md-nav__link">
+      <a href="../%E7%AE%80%E5%8D%95%E5%AF%BC%E8%88%AA1/" class="md-nav__link">
         
   
   
@@ -826,7 +844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dotnet/WPF/%E7%AE%80%E5%8D%95%E5%AF%BC%E8%88%AA2/" class="md-nav__link">
+      <a href="../%E7%AE%80%E5%8D%95%E5%AF%BC%E8%88%AA2/" class="md-nav__link">
         
   
   
@@ -856,7 +874,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dotnet/WPF/%E8%87%AA%E5%AE%9A%E4%B9%89%20MessageBox/" class="md-nav__link">
+      <a href="../%E8%87%AA%E5%AE%9A%E4%B9%89%20MessageBox/" class="md-nav__link">
         
   
   
@@ -886,7 +904,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dotnet/WPF/%E8%87%AA%E5%AE%9A%E4%B9%89%20Snackbar/" class="md-nav__link">
+      <a href="../%E8%87%AA%E5%AE%9A%E4%B9%89%20Snackbar/" class="md-nav__link">
         
   
   
@@ -916,7 +934,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dotnet/WPF/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6/" class="md-nav__link">
+      <a href="../%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6/" class="md-nav__link">
         
   
   
@@ -1075,7 +1093,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E5%B7%A5%E5%85%B7/Code%20snippet/VS%20C%23%20partial%20property/" class="md-nav__link">
+      <a href="../../../%E5%B7%A5%E5%85%B7/Code%20snippet/VS%20C%23%20partial%20property/" class="md-nav__link">
         
   
   
@@ -1169,7 +1187,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E5%B7%A5%E5%85%B7/Git/%E5%90%88%E5%B9%B6%E6%9C%80%E8%BF%91%E7%9A%84%E6%8F%90%E4%BA%A4/" class="md-nav__link">
+      <a href="../../../%E5%B7%A5%E5%85%B7/Git/%E5%90%88%E5%B9%B6%E6%9C%80%E8%BF%91%E7%9A%84%E6%8F%90%E4%BA%A4/" class="md-nav__link">
         
   
   
@@ -1211,10 +1229,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -1228,22 +1244,19 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   
@@ -1261,7 +1274,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1279,7 +1292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../persons%20%E5%92%8C%20people/" class="md-nav__link">
+      <a href="../../../%E8%8B%B1%E8%AF%AD/persons%20%E5%92%8C%20people/" class="md-nav__link">
         
   
   
@@ -1306,37 +1319,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M20.8 34c16.5-6.2 35 2.2 41.2 18.7l110.2 294L257.3 55c4-13.7 16.5-23 30.7-23s26.7 9.4 30.7 23l85.1 291.7L514 52.8c6.2-16.5 24.6-24.9 41.2-18.7s25 24.6 18.8 41.1l-144 384c-4.8 12.9-17.4 21.3-31.2 20.7s-25.7-9.8-29.5-23L288 178.3 206.7 457c-3.9 13.2-15.8 22.5-29.5 23s-26.3-7.8-31.2-20.7L2 75.2c-6.2-16.5 2.2-35 18.8-41.2"/></svg>
-  
-  <span class="md-ellipsis">
-    
-  
-    表示“保留”的单词
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../%E8%8B%B1%E8%AF%AD/%E8%A1%A8%E7%A4%BA%E2%80%9C%E4%BF%9D%E7%95%99%E2%80%9D%E7%9A%84%E5%8D%95%E8%AF%8D/" class="md-nav__link">
         
   
   
@@ -1354,97 +1340,6 @@
   
 
       </a>
-      
-        
-
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#words" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Words
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Words">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#preserve" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Preserve
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#conserve" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Conserve
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reserve" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reserve
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#remain" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Remain
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ref" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ref
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1457,7 +1352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E8%A1%A8%E7%A4%BA%E2%80%9C%E8%BD%AC%E6%8D%A2%E2%80%9D%E7%9A%84%E5%8D%95%E8%AF%8D/" class="md-nav__link">
+      <a href="../../../%E8%8B%B1%E8%AF%AD/%E8%A1%A8%E7%A4%BA%E2%80%9C%E8%BD%AC%E6%8D%A2%E2%80%9D%E7%9A%84%E5%8D%95%E8%AF%8D/" class="md-nav__link">
         
   
   
@@ -1552,7 +1447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1/%E6%9C%89%E9%99%90%E7%8A%B6%E6%80%81%E6%9C%BA/" class="md-nav__link">
+      <a href="../../../%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1/%E6%9C%89%E9%99%90%E7%8A%B6%E6%80%81%E6%9C%BA/" class="md-nav__link">
         
   
   
@@ -1582,7 +1477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1/%E6%B4%BB%E5%8A%A8%E5%9B%BE/" class="md-nav__link">
+      <a href="../../../%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1/%E6%B4%BB%E5%8A%A8%E5%9B%BE/" class="md-nav__link">
         
   
   
@@ -1675,7 +1570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E9%A1%B9%E7%9B%AE/%E8%87%AA%E5%8A%A8%E7%B1%BB%E5%9B%BE%E7%94%9F%E6%88%90/" class="md-nav__link">
+      <a href="../../../%E9%A1%B9%E7%9B%AE/%E8%87%AA%E5%8A%A8%E7%B1%BB%E5%9B%BE%E7%94%9F%E6%88%90/" class="md-nav__link">
         
   
   
@@ -1724,86 +1619,6 @@
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#words" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Words
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Words">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#preserve" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Preserve
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#conserve" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Conserve
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reserve" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reserve
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#remain" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Remain
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ref" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ref
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1827,7 +1642,7 @@
   
   
     <li class="md-path__item">
-      <a href="../.." class="md-path__link">
+      <a href="../../.." class="md-path__link">
         
   <span class="md-ellipsis">
     介绍
@@ -1844,11 +1659,37 @@
   
     
     
+      
+  
+  
+    
+    
       <li class="md-path__item">
-        <a href="../persons%20%E5%92%8C%20people/" class="md-path__link">
+        <a href="../../C%23/await/" class="md-path__link">
           
   <span class="md-ellipsis">
-    英语
+    Dotnet
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../Prism%E7%9A%84%E5%AF%BC%E8%88%AA/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    WPF
   </span>
 
         </a>
@@ -1865,39 +1706,47 @@
                 
                   
 
-  <h1>表示“保留”的单词</h1>
+  <h1>Window和UseControl生命周期</h1>
 
-<h2 id="words">Words<a class="headerlink" href="#words" title="Permanent link">&para;</a></h2>
-<h3 id="preserve">Preserve<a class="headerlink" href="#preserve" title="Permanent link">&para;</a></h3>
-<ul>
-<li>为防止事物被破坏、损害或变质而保护、保留它原本的状态</li>
+<blockquote>
+<p><a href="https://learn.microsoft.com/en-us/dotnet/desktop/wpf/events/object-lifetime-events">https://learn.microsoft.com/en-us/dotnet/desktop/wpf/events/object-lifetime-events</a></p>
+</blockquote>
+<ol>
+<li><code>Window()</code></li>
+<li><code>Window.InitializeComponent</code></li>
+<li><code>UserControl()</code></li>
+<li><code>UserControl.InitializeComponent</code></li>
+<li><code>UserControl.Initialized</code><ul>
+<li>元素的属性已被设置</li>
+<li>构造函数执行完毕</li>
+<li>子元素已经初始化完成</li>
+<li>但是 <code>Initialized</code> 事件并不等待所有元素及其子元素被初始化完毕再发出</li>
 </ul>
-<p>A new art museum is being built to preserve the cultural heritage of the local community.</p>
-<p>Making sauerkraut is a good way to preserve cabbage.</p>
-<h3 id="conserve">Conserve<a class="headerlink" href="#conserve" title="Permanent link">&para;</a></h3>
-<ul>
-<li>通过管理、利用、节约，从而达到保护的目的</li>
-<li>多用于谈论保护自然和生态环境、减少浪费、节约能源的语境中</li>
+</li>
+<li><code>Window.Initialized</code></li>
+<li><code>UserControl.Loaded</code><ul>
+<li>When the logical tree that contains the element is complete and connected to a presentation source. The presentation source provides the window handle (HWND) and rendering surface.</li>
+<li>数据绑定已经完成</li>
+<li>布局系统已经完成所有渲染所需的计算</li>
+<li>在最终渲染之前</li>
+<li><code>Loaded</code> 事件会等待所有逻辑树上的元素都加载完成，自上而下传播，类似 tunneling</li>
+<li>在 <code>Activated</code> 事件发出后才会发出</li>
 </ul>
-<p>This area is severely affected by drought. They’re doing their best to conserve water.</p>
-<h3 id="reserve">Reserve<a class="headerlink" href="#reserve" title="Permanent link">&para;</a></h3>
-<ul>
-<li>专门保留、预留</li>
-<li>预定</li>
-<li>n. 动植物、生态环境的保护区，如，wildlife reserves</li>
+</li>
+<li><code>Window.Loaded</code><ul>
+<li>需要加载数据的时候</li>
 </ul>
-<p>I’m afraid the front seats are reserved for our staff. Would you mind sitting somewhere else?</p>
-<p>I’d like to reserve a table at 7pm, please.</p>
-<h3 id="remain"><a href="https://dictionary.cambridge.org/dictionary/english-chinese-simplified/remain">Remain</a><a class="headerlink" href="#remain" title="Permanent link">&para;</a></h3>
-<ul>
-<li>v. to stay in the same place or in the same condition</li>
-<li>to continue to exist when other parts or other things no longer exist</li>
+</li>
+<li><code>Window.ContentRendered</code><ul>
+<li>需要操作组件的时候</li>
 </ul>
-<p>It remains a secret.</p>
-<p>The doctor ordered him to remain in bed for a few days.</p>
-<p>Only a few hundred of these animals remain today.</p>
-<h2 id="ref">Ref<a class="headerlink" href="#ref" title="Permanent link">&para;</a></h2>
-<p><a href="https://language.chinadaily.com.cn/a/202004/08/WS5e8d19c1a310aeaeeed509fd.html">Preserve, conserve, reserve 辨析表示 “保护、保留” 的词语</a></p>
+</li>
+<li><code>Window.Unloaded</code></li>
+<li><code>UseControl.Unloaded</code><ul>
+<li>当 <code>Unloaded</code> 事件来到子元素的时候，它的父级可能已经 unset 了，这意味着父级的绑定、资源引用、样式的值已经不正确了</li>
+</ul>
+</li>
+</ol>
 
 
   <nav class="md-tags" >
@@ -1906,14 +1755,14 @@
       
       
       
-        <span class="md-tag">English</span>
+        <span class="md-tag">WPF</span>
       
     
       
       
       
       
-        <span class="md-tag">Word</span>
+        <span class="md-tag">Frontend</span>
       
     
   </nav>
@@ -1958,7 +1807,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../persons%20%E5%92%8C%20people/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Persons 和 people">
+          <a href="../Prism%E7%9A%84%E5%AF%BC%E8%88%AA/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Prism的导航">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
@@ -1968,20 +1817,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Persons 和 people
+                Prism的导航
               </div>
             </div>
           </a>
         
         
           
-          <a href="../%E8%A1%A8%E7%A4%BA%E2%80%9C%E8%BD%AC%E6%8D%A2%E2%80%9D%E7%9A%84%E5%8D%95%E8%AF%8D/" class="md-footer__link md-footer__link--next" aria-label="Next: 表示“转换”的单词">
+          <a href="../%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5%E5%AE%B9%E5%99%A8%E4%B8%AD%E6%B3%A8%E5%86%8C%E5%B7%A5%E5%8E%82/" class="md-footer__link md-footer__link--next" aria-label="Next: 依赖注入容器中注册工厂">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                表示“转换”的单词
+                依赖注入容器中注册工厂
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2024,10 +1873,10 @@
       
       
       
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.path","navigation.sections","navigation.tabs","navigation.tabs.sticky","navigation.top","navigation.tracking","search.highlight"],"search":"../../assets/javascripts/workers/search.1bfe1b73.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.path","navigation.sections","navigation.tabs","navigation.tabs.sticky","navigation.top","navigation.tracking","search.highlight"],"search":"../../../assets/javascripts/workers/search.1bfe1b73.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.6008f134.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.6008f134.min.js"></script>
       
     
   </body>
