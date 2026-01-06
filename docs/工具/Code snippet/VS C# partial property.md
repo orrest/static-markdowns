@@ -1,8 +1,4 @@
 ---
-tags:
-	- Tools
-	- Code
-	- VisualStudio
 icon: fontawesome/solid/file-code
 ---
 
