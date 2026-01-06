@@ -1,6 +1,6 @@
 ---
 tags:
-	- Tools
+    - Tools
 icon: fontawesome/solid/file-code
 ---
 
