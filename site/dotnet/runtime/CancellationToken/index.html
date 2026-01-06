@@ -12,30 +12,36 @@
         <meta name="author" content="Orrest">
       
       
+        <link rel="canonical" href="https://www.orrest.me/dotnet/runtime/CancellationToken/">
       
+      
+        <link rel="prev" href="../../WPF/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6/">
+      
+      
+        <link rel="next" href="../../../%E5%B7%A5%E5%85%B7/Code%20snippet/VS%20C%23%20partial%20property/">
       
       
         
       
       
-      <link rel="icon" href="/images/favicon.png">
+      <link rel="icon" href="../../../images/favicon.png">
       <meta name="generator" content="zensical-0.0.14">
     
     
       
-        <title>Orrest's</title>
+        <title>CancellationToken - Orrest's</title>
       
     
     
       
         
       
-      <link rel="stylesheet" href="/assets/stylesheets/modern/main.f1b6466b.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/modern/main.f1b6466b.min.css">
       
         
           
         
-        <link rel="stylesheet" href="/assets/stylesheets/modern/palette.dfe2e883.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/modern/palette.dfe2e883.min.css">
       
       
   
@@ -83,7 +89,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
 
@@ -107,6 +113,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -119,7 +130,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/" title="Orrest&#x27;s" class="md-header__button md-logo" aria-label="Orrest's" data-md-component="logo">
+    <a href="../../.." title="Orrest&#x27;s" class="md-header__button md-logo" aria-label="Orrest's" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M475.3.1c9.9-.8 19.6 3 26.6 10s10.8 16.7 10 26.6c-4 49.3-17.4 126.2-46.3 199.7-1.8 4.5-5.5 7.9-10.2 9.3L374.5 270c-3.9 1.2-6.5 4.7-6.5 8.8 0 5.1 4.1 9.2 9.2 9.2h38.6c12 0 19.7 12.8 13.5 23.1-4 6.7-8.3 13.2-12.7 19.6-2 2.9-5 5-8.4 6.1L310.5 366c-3.9 1.2-6.5 4.7-6.5 8.8 0 5.1 4.1 9.2 9.2 9.2h16c14.6 0 21 17.4 8.8 25.4-68 45-137.7 43.3-182.4 31.3-12.7-3.4-24-9.9-34.4-17.9L48 496c-8.8 8.8-23.2 8.8-32 0s-8.8-23.2 0-32l80-80 .5.5q1.05-1.95 2.7-3.6L256 224c8.8-8.8 8.8-23.2 0-32s-23.2-8.8-32 0L89.7 326.2c-8.9 8.9-24 4.4-25-8.2-4.3-53.2 9.3-123.1 72.6-186.4C228.4 40.5 391.5 6.9 475.2.1z"/></svg>
@@ -139,7 +150,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              CancellationToken
             
           </span>
         </div>
@@ -207,7 +218,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/" class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   介绍
@@ -221,6 +232,8 @@
   
   
   
+    
+  
   
     
     
@@ -228,11 +241,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/dotnet/C%23/await/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../C%23/await/" class="md-tabs__link">
           
   
   Dotnet
@@ -261,7 +276,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/%E5%B7%A5%E5%85%B7/Code%20snippet/VS%20C%23%20partial%20property/" class="md-tabs__link">
+        <a href="../../../%E5%B7%A5%E5%85%B7/Code%20snippet/VS%20C%23%20partial%20property/" class="md-tabs__link">
           
   
   工具
@@ -283,7 +298,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/%E8%8B%B1%E8%AF%AD/persons%20%E5%92%8C%20people/" class="md-tabs__link">
+        <a href="../../../%E8%8B%B1%E8%AF%AD/persons%20%E5%92%8C%20people/" class="md-tabs__link">
           
   
   英语
@@ -302,7 +317,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1/%E6%9C%89%E9%99%90%E7%8A%B6%E6%80%81%E6%9C%BA/" class="md-tabs__link">
+        <a href="../../../%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1/%E6%9C%89%E9%99%90%E7%8A%B6%E6%80%81%E6%9C%BA/" class="md-tabs__link">
           
   
   软件设计
@@ -321,7 +336,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/%E9%A1%B9%E7%9B%AE/%E8%87%AA%E5%8A%A8%E7%B1%BB%E5%9B%BE%E7%94%9F%E6%88%90/" class="md-tabs__link">
+        <a href="../../../%E9%A1%B9%E7%9B%AE/%E8%87%AA%E5%8A%A8%E7%B1%BB%E5%9B%BE%E7%94%9F%E6%88%90/" class="md-tabs__link">
           
   
   项目
@@ -360,7 +375,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/" title="Orrest&#x27;s" class="md-nav__button md-logo" aria-label="Orrest's" data-md-component="logo">
+    <a href="../../.." title="Orrest&#x27;s" class="md-nav__button md-logo" aria-label="Orrest's" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M475.3.1c9.9-.8 19.6 3 26.6 10s10.8 16.7 10 26.6c-4 49.3-17.4 126.2-46.3 199.7-1.8 4.5-5.5 7.9-10.2 9.3L374.5 270c-3.9 1.2-6.5 4.7-6.5 8.8 0 5.1 4.1 9.2 9.2 9.2h38.6c12 0 19.7 12.8 13.5 23.1-4 6.7-8.3 13.2-12.7 19.6-2 2.9-5 5-8.4 6.1L310.5 366c-3.9 1.2-6.5 4.7-6.5 8.8 0 5.1 4.1 9.2 9.2 9.2h16c14.6 0 21 17.4 8.8 25.4-68 45-137.7 43.3-182.4 31.3-12.7-3.4-24-9.9-34.4-17.9L48 496c-8.8 8.8-23.2 8.8-32 0s-8.8-23.2 0-32l80-80 .5.5q1.05-1.95 2.7-3.6L256 224c8.8-8.8 8.8-23.2 0-32s-23.2-8.8-32 0L89.7 326.2c-8.9 8.9-24 4.4-25-8.2-4.3-53.2 9.3-123.1 72.6-186.4C228.4 40.5 391.5 6.9 475.2.1z"/></svg>
@@ -378,7 +393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/" class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -404,8 +419,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -419,19 +436,22 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -449,7 +469,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -479,17 +499,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
         
           
-          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="">
             
   
   
@@ -525,7 +548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/dotnet/C%23/await/" class="md-nav__link">
+      <a href="../../C%23/await/" class="md-nav__link">
         
   
   
@@ -555,7 +578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/dotnet/C%23/double.ToString/" class="md-nav__link">
+      <a href="../../C%23/double.ToString/" class="md-nav__link">
         
   
   
@@ -619,17 +642,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
         
           
-          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
             
   
   
@@ -665,7 +691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/dotnet/WPF/Prism%E7%9A%84%E5%AF%BC%E8%88%AA/" class="md-nav__link">
+      <a href="../../WPF/Prism%E7%9A%84%E5%AF%BC%E8%88%AA/" class="md-nav__link">
         
   
   
@@ -695,7 +721,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/dotnet/WPF/Window%E5%92%8CUseControl%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" class="md-nav__link">
+      <a href="../../WPF/Window%E5%92%8CUseControl%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" class="md-nav__link">
         
   
   
@@ -725,7 +751,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/dotnet/WPF/%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5%E5%AE%B9%E5%99%A8%E4%B8%AD%E6%B3%A8%E5%86%8C%E5%B7%A5%E5%8E%82/" class="md-nav__link">
+      <a href="../../WPF/%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5%E5%AE%B9%E5%99%A8%E4%B8%AD%E6%B3%A8%E5%86%8C%E5%B7%A5%E5%8E%82/" class="md-nav__link">
         
   
   
@@ -755,7 +781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/dotnet/WPF/%E5%BC%82%E6%AD%A5%E9%9F%B3%E9%A2%91%E6%92%AD%E6%94%BE/" class="md-nav__link">
+      <a href="../../WPF/%E5%BC%82%E6%AD%A5%E9%9F%B3%E9%A2%91%E6%92%AD%E6%94%BE/" class="md-nav__link">
         
   
   
@@ -785,7 +811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/dotnet/WPF/%E7%AE%80%E5%8D%95%E5%AF%BC%E8%88%AA1/" class="md-nav__link">
+      <a href="../../WPF/%E7%AE%80%E5%8D%95%E5%AF%BC%E8%88%AA1/" class="md-nav__link">
         
   
   
@@ -815,7 +841,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/dotnet/WPF/%E7%AE%80%E5%8D%95%E5%AF%BC%E8%88%AA2/" class="md-nav__link">
+      <a href="../../WPF/%E7%AE%80%E5%8D%95%E5%AF%BC%E8%88%AA2/" class="md-nav__link">
         
   
   
@@ -845,7 +871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/dotnet/WPF/%E8%87%AA%E5%AE%9A%E4%B9%89%20MessageBox/" class="md-nav__link">
+      <a href="../../WPF/%E8%87%AA%E5%AE%9A%E4%B9%89%20MessageBox/" class="md-nav__link">
         
   
   
@@ -875,7 +901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/dotnet/WPF/%E8%87%AA%E5%AE%9A%E4%B9%89%20Snackbar/" class="md-nav__link">
+      <a href="../../WPF/%E8%87%AA%E5%AE%9A%E4%B9%89%20Snackbar/" class="md-nav__link">
         
   
   
@@ -905,7 +931,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/dotnet/WPF/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6/" class="md-nav__link">
+      <a href="../../WPF/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6/" class="md-nav__link">
         
   
   
@@ -940,8 +966,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -952,18 +980,21 @@
     
       
       
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
         
           
-          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
             
   
   
@@ -981,7 +1012,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -996,10 +1027,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/dotnet/runtime/CancellationToken/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M360.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6m64.6 136.1c-12.5 12.5-12.5 32.8 0 45.3l73.4 73.4-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l96-96c12.5-12.5 12.5-32.8 0-45.3l-96-96c-12.5-12.5-32.8-12.5-45.3 0zm-274.7 0c-12.5-12.5-32.8-12.5-45.3 0l-96 96c-12.5 12.5-12.5 32.8 0 45.3l96 96c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l73.3-73.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    CancellationToken
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1017,6 +1075,69 @@
   
 
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        概述
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#token" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Token
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transitiontocancellationrequested" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TransitionToCancellationRequested()
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ref" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ref
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1158,7 +1279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E5%B7%A5%E5%85%B7/Code%20snippet/VS%20C%23%20partial%20property/" class="md-nav__link">
+      <a href="../../../%E5%B7%A5%E5%85%B7/Code%20snippet/VS%20C%23%20partial%20property/" class="md-nav__link">
         
   
   
@@ -1252,7 +1373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E5%B7%A5%E5%85%B7/Git/%E5%90%88%E5%B9%B6%E6%9C%80%E8%BF%91%E7%9A%84%E6%8F%90%E4%BA%A4/" class="md-nav__link">
+      <a href="../../../%E5%B7%A5%E5%85%B7/Git/%E5%90%88%E5%B9%B6%E6%9C%80%E8%BF%91%E7%9A%84%E6%8F%90%E4%BA%A4/" class="md-nav__link">
         
   
   
@@ -1357,7 +1478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E8%8B%B1%E8%AF%AD/persons%20%E5%92%8C%20people/" class="md-nav__link">
+      <a href="../../../%E8%8B%B1%E8%AF%AD/persons%20%E5%92%8C%20people/" class="md-nav__link">
         
   
   
@@ -1387,7 +1508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E8%8B%B1%E8%AF%AD/%E8%A1%A8%E7%A4%BA%E2%80%9C%E4%BF%9D%E7%95%99%E2%80%9D%E7%9A%84%E5%8D%95%E8%AF%8D/" class="md-nav__link">
+      <a href="../../../%E8%8B%B1%E8%AF%AD/%E8%A1%A8%E7%A4%BA%E2%80%9C%E4%BF%9D%E7%95%99%E2%80%9D%E7%9A%84%E5%8D%95%E8%AF%8D/" class="md-nav__link">
         
   
   
@@ -1417,7 +1538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E8%8B%B1%E8%AF%AD/%E8%A1%A8%E7%A4%BA%E2%80%9C%E8%BD%AC%E6%8D%A2%E2%80%9D%E7%9A%84%E5%8D%95%E8%AF%8D/" class="md-nav__link">
+      <a href="../../../%E8%8B%B1%E8%AF%AD/%E8%A1%A8%E7%A4%BA%E2%80%9C%E8%BD%AC%E6%8D%A2%E2%80%9D%E7%9A%84%E5%8D%95%E8%AF%8D/" class="md-nav__link">
         
   
   
@@ -1512,7 +1633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1/%E6%9C%89%E9%99%90%E7%8A%B6%E6%80%81%E6%9C%BA/" class="md-nav__link">
+      <a href="../../../%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1/%E6%9C%89%E9%99%90%E7%8A%B6%E6%80%81%E6%9C%BA/" class="md-nav__link">
         
   
   
@@ -1542,7 +1663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1/%E6%B4%BB%E5%8A%A8%E5%9B%BE/" class="md-nav__link">
+      <a href="../../../%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1/%E6%B4%BB%E5%8A%A8%E5%9B%BE/" class="md-nav__link">
         
   
   
@@ -1635,7 +1756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E9%A1%B9%E7%9B%AE/%E8%87%AA%E5%8A%A8%E7%B1%BB%E5%9B%BE%E7%94%9F%E6%88%90/" class="md-nav__link">
+      <a href="../../../%E9%A1%B9%E7%9B%AE/%E8%87%AA%E5%8A%A8%E7%B1%BB%E5%9B%BE%E7%94%9F%E6%88%90/" class="md-nav__link">
         
   
   
@@ -1684,6 +1805,58 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        概述
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#token" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Token
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transitiontocancellationrequested" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TransitionToCancellationRequested()
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ref" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ref
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1700,11 +1873,180 @@
   
 
 
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    介绍
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../C%23/await/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Dotnet
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="./" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Runtime
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
               
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+  <h1>CancellationToken</h1>
+
+<h2 id="_1">概述<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>从思路上来说 <code>CancellationToken</code> 是 .NET 提供的一种类型，这种类型的变量被用来从一个任务的外部终止任务。</p>
+<p>之所以能够实现“终止”的功能，是因为在任务的实现中有类似：</p>
+<div class="language-C# highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="k">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">token</span><span class="p">.</span><span class="n">IsCancellationRequested</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">        </span><span class="c1">// ...</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="c1">// ...</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>这样的逻辑，使得在任务外部能够控制任务内部的停止。</p>
+<p><code>CancellationTokenSource</code> 是 <code>CancellationToken</code> 的管理类，可以通过它来执行取消操作。</p>
+<h2 id="token">Token<a class="headerlink" href="#token" title="Permanent link">&para;</a></h2>
+<div class="language-C# highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">/// &lt;summary&gt;Gets the &lt;see cref=&quot;CancellationToken&quot;/&gt; associated with this &lt;see cref=&quot;CancellationTokenSource&quot;/&gt;.&lt;/summary&gt;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1">/// &lt;value&gt;The &lt;see cref=&quot;CancellationToken&quot;/&gt; associated with this &lt;see cref=&quot;CancellationTokenSource&quot;/&gt;.&lt;/value&gt;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1">/// &lt;exception cref=&quot;ObjectDisposedException&quot;&gt;The token source has been disposed.&lt;/exception&gt;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">public</span><span class="w"> </span><span class="n">CancellationToken</span><span class="w"> </span><span class="n">Token</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">{</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="k">get</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">        </span><span class="n">ThrowIfDisposed</span><span class="p">();</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">CancellationToken</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><code>Token</code> 是一个计算属性，每次访问都会得到一个新的 <code>CancellationToken</code> 示例。</p>
+<p><code>CancellationToken</code> 是值类型，它不需要 <code>Dispose</code>。</p>
+<h2 id="transitiontocancellationrequested">TransitionToCancellationRequested()<a class="headerlink" href="#transitiontocancellationrequested" title="Permanent link">&para;</a></h2>
+<p>这个私有方法在 <code>Cancel()</code> 等方法内部调用：</p>
+<div class="language-C# highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">/// &lt;summary&gt;Transitions from &lt;see cref=&quot;States.NotCanceledState&quot;/&gt; to &lt;see cref=&quot;States.NotifyingState&quot;/&gt;.&lt;/summary&gt;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1">/// &lt;returns&gt;true if it successfully transitioned; otherwise, false.&lt;/returns&gt;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1">/// &lt;remarks&gt;If it successfully transitions, it will also have disposed of &lt;see cref=&quot;_timer&quot;/&gt; and set &lt;see cref=&quot;_kernelEvent&quot;/&gt;.&lt;/remarks&gt;</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">private</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="nf">TransitionToCancellationRequested</span><span class="p">()</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">{</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">IsCancellationRequested</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">        </span><span class="n">Interlocked</span><span class="p">.</span><span class="n">CompareExchange</span><span class="p">(</span><span class="k">ref</span><span class="w"> </span><span class="n">_state</span><span class="p">,</span><span class="w"> </span><span class="n">States</span><span class="p">.</span><span class="n">NotifyingState</span><span class="p">,</span><span class="w"> </span><span class="n">States</span><span class="p">.</span><span class="n">NotCanceledState</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">States</span><span class="p">.</span><span class="n">NotCanceledState</span><span class="p">)</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">        </span><span class="c1">// Dispose of the timer, if any.  Dispose may be running concurrently here, but ITimer.Dispose is thread-safe.</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">        </span><span class="n">ITimer</span><span class="o">?</span><span class="w"> </span><span class="n">timer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_timer</span><span class="p">;</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">timer</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">            </span><span class="n">_timer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">;</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">            </span><span class="n">timer</span><span class="p">.</span><span class="n">Dispose</span><span class="p">();</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">        </span><span class="c1">// Set the event if it&#39;s been lazily initialized and hasn&#39;t yet been disposed of.  Dispose may</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">        </span><span class="c1">// be running concurrently, in which case either it&#39;ll have set m_kernelEvent back to null and</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">        </span><span class="c1">// we won&#39;t see it here, or it&#39;ll see that we&#39;ve transitioned to NOTIFYING and will skip disposing it,</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">        </span><span class="c1">// leaving cleanup to finalization.</span>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">        </span><span class="n">_kernelEvent</span><span class="o">?.</span><span class="n">Set</span><span class="p">();</span>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">true</span><span class="p">;</span>
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="p">}</span>
+</span></code></pre></div>
+<ul>
+<li><code>_state</code> 是一个 <code>volatile</code> 变量 <code>volatile</code> 不保证原子性，因此在写 <code>_state</code> 时使用了原子操作作为锁；</li>
+<li><code>CompareExchange</code> 的含义是，如果当前引用等于第三个变量的值，那么将其改为第二个值，并返回修改前的状态；即，如果当前是“NotCanceledState”状态，将其改为“NotifyingState”状态；</li>
+<li>释放了内部持有的资源，timer 及 WaitHandle；</li>
+</ul>
+<h2 id="ref">Ref<a class="headerlink" href="#ref" title="Permanent link">&para;</a></h2>
+<p><a href="https://learn.microsoft.com/en-us/dotnet/api/system.threading.cancellationtokensource?view=net-10.0">CancellationTokenSource Class</a></p>
+
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <span class="md-tag">C#</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">Threading</span>
+      
+    
+  </nav>
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -1724,6 +2066,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../WPF/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 自定义组件">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                自定义组件
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../../%E5%B7%A5%E5%85%B7/Code%20snippet/VS%20C%23%20partial%20property/" class="md-footer__link md-footer__link--next" aria-label="Next: VS C# partial property">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                VS C# partial property
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -1757,10 +2137,10 @@
       
       
       
-      <script id="__config" type="application/json">{"annotate":null,"base":"/","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.path","navigation.sections","navigation.tabs","navigation.tabs.sticky","navigation.top","navigation.tracking","search.highlight"],"search":"/assets/javascripts/workers/search.1bfe1b73.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.path","navigation.sections","navigation.tabs","navigation.tabs.sticky","navigation.top","navigation.tracking","search.highlight"],"search":"../../../assets/javascripts/workers/search.1bfe1b73.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="/assets/javascripts/bundle.6008f134.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.6008f134.min.js"></script>
       
     
   </body>
