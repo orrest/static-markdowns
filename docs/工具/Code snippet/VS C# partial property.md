@@ -6,7 +6,6 @@ tags:
 icon: fontawesome/solid/file-code
 ---
 
-
 用于 `CommunityToolkit.Mvvm` 的 partial property Code Snippet。
 
 ## Code Snippet
